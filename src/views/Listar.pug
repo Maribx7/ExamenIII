@@ -1,0 +1,23 @@
+doctype html
+h1 Lista de Usuarios
+.row
+  if usuarios
+    each user in usuarios
+      .col-md-3
+        .card
+          .card-body
+            h4.card-title.d-flex.justify-content-between.align-items-center
+    a(href=`/Modificar/${user._id}`) Modificar
+            p Cedula: #{user.Cedula}
+            p Nombre: #{user.Nombre}
+            p PrimerApellido: #{user.PrimerApellido}
+            p SegundoApellido: #{user.SegundoApellido}
+            p Telefono: #{user.Telefono}
+            p Correo: #{user.Correo}
+            p Contraseña: #{user.Contraseña}
+            form(action=`/Eliminar/${user._id}?_method=DELETE`, method="POST")
+              input(type="hidden", name="_method", value="DELETE")
+              button(type="submit", class="btn btn-danger btn-block btn-sm") Eliminar
+  else
+    .col-md-12
+      p Error al cargar la base de datos.

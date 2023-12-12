@@ -1,0 +1,31 @@
+doctype html
+.col-md-4.mx-auto
+  .card
+    .card-header
+      h3 Modificar datos
+    .card-body
+      form(method="POST", action=`/ModificarUsuario/${usuario._id}?_method=PUT`)
+        input(type="hidden", name="_method", value="PUT")
+        .form-group
+          input(type="text", name="Cedula", class="form-control", value=usuario.Cedula)
+        
+        .form-group
+          input(type="text", name="Nombre", class="form-control", value=usuario.Nombre)
+        
+        .form-group
+          input(type="text", name="PrimerApellido", class="form-control", value=usuario.PrimerApellido)
+        
+        .form-group
+          input(type="text", name="SegundoApellido", class="form-control", value=usuario.SegundoApellido)
+        
+        .form-group
+          input(type="text", name="Telefono", class="form-control", value=usuario.Telefono)
+        
+        .form-group
+          input(type="text", name="Correo", class="form-control", value=usuario.Correo)
+        
+        .form-group
+          input(type="text", name="Contraseña", class="form-control", placeholder="Contraseña", autofocus)
+        
+        .form-group
+          button.btn.btn-primary.btn-block(type="submit") Guardar Modificacion

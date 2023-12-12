@@ -1,0 +1,30 @@
+doctype html
+.col-md-4.mx-auto
+  div
+    div.card-hearder
+      h3 Nuevo Usuario
+    div.card-body
+      form(action="/Usuario/Registro", method="post")
+        div.from-group
+          input(type="text", name="Cedula", class="form-control", placeholder="Cedula", autofocus)
+          
+        div.from-group
+          input(type="text", name="Nombre", class="form-control", placeholder="Nombre", autofocus)
+        
+        div.from-group
+          input(type="text", name="PrimerApellido", class="form-control", placeholder="PrimerApellido", autofocus)
+        
+        div.from-group
+          input(type="text", name="SegundoApellido", class="form-control", placeholder="PrimerApellido", autofocus)
+        
+        div.from-group
+          input(type="text", name="Telefono", class="form-control", placeholder="Telefono", autofocus)
+        
+        div.from-group
+          input(type="text", name="Correo", class="form-control", placeholder="Correo", autofocus)
+        
+        div.from-group
+          input(type="text", name="Contraseña", class="form-control", placeholder="Contraseña", autofocus)
+        
+        div.from-gro
+          button.btn.btn.primary.btn.block Registrar

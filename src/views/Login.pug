@@ -1,0 +1,16 @@
+doctype html
+.col-md-4.mx-auto
+  div
+    div.card-hearder
+      h3 LOGIN
+    div.card-body
+      form(method="POST", action="/Inicio")
+        input(type="hidden", name="_method", value="PUT")
+        div.from-group
+          input(type="text", name="Cedula", class="form-control", placeholder="Cedula", autofocus)
+        
+        div.from-group
+          input(type="text", name="Contraseña", class="form-control", placeholder="Contraseña", autofocus)
+        
+        div.from-gro
+          button.btn.btn.primary.btn.block Iniciar Sesion
